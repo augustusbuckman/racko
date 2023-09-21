@@ -1,0 +1,845 @@
+Example output for Assignment 7, using lists to simulate Rack-O..
+
+Give the same inputs, your output shall match the following output exactly.
+
+The output does not include the lines with ***** before and after the output. 
+Those lines are to delineate the required output.
+
+I strongly recommend you check your output against the expected output using
+a diff tool such as https://www.diffchecker.com/.
+
+Example 1 - Inputs: y,4,5,p,1,60,0,-5,12,29,p,57,p,23,d,p,27,p,27,48
+
+*****
+----- Welcome to Rack - O! -----
+Enter y to display instructions: y
+
+The goal of the game is to get the cards in your rack of cards
+into ascending order. Your rack has ten slots numbered 1 to 10.
+During your turn you can draw the top card of the deck or take
+the top card of the discard pile.
+If you draw the top card of the deck, you can use that card to
+replace a card in one slot of your rack. The replaced card goes to
+the discard pile.
+Alternatively you can simply choose to discard the drawn card.
+If you take the top card of the discard pile you must use it to
+replace a card in one slot of your rack. The replaced card goes
+to the top of the discard pile.
+
+Enter number for initial seed: 4
+Enter the size of the rack to use. Must be between 5 and 10: 5
+
+Player 1's turn.
+Your current rack  [29, 48, 46, 50, 23]
+Top of discard pile  1
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 1: 1
+1 is not in your rack.
+Enter the card number to replace with the 1: 60
+60 is not in your rack.
+Enter the card number to replace with the 1: 0
+0 is not in your rack.
+Enter the card number to replace with the 1: -5
+-5 is not in your rack.
+Enter the card number to replace with the 1: 12
+12 is not in your rack.
+Enter the card number to replace with the 1: 29
+The rack after the turn  [1, 48, 46, 50, 23]
+
+Player 2's turn.
+Your current rack  [40, 44, 57, 55, 27]
+Top of discard pile  29
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 29: 57
+The rack after the turn  [40, 44, 29, 55, 27]
+
+Player 1's turn.
+Your current rack  [1, 48, 46, 50, 23]
+Top of discard pile  57
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 57: 23
+The rack after the turn  [1, 48, 46, 50, 57]
+
+Player 2's turn.
+Your current rack  [40, 44, 29, 55, 27]
+Top of discard pile  23
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 52
+Enter p to place card, anything else to discard it: p
+Enter the card number to replace with the 52: 27
+The rack after the turn  [40, 44, 29, 55, 52]
+
+Player 1's turn.
+Your current rack  [1, 48, 46, 50, 57]
+Top of discard pile  27
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 27: 27
+27 is not in your rack.
+Enter the card number to replace with the 27: 48
+The rack after the turn  [1, 27, 46, 50, 57]
+
+Player 1 wins!
+
+*****
+
+
+Example 2 - Inputs: n,5,10,p,55,p,19,p,36,p,46,p,56,p,57,p,32,p,21,d,d,p,43,p,10,d,d,p,44,p,39,p,9,d,d,d,p,38,p,59,d,p,26,d,p,12,d,p,50,d,d,d,d,d,d,d,d,d,d,p,29,d,d,d,p,5,d,d,d,p,60
+
+*****
+----- Welcome to Rack - O! -----
+Enter y to display instructions: n
+
+Enter number for initial seed: 5
+Enter the size of the rack to use. Must be between 5 and 10: 10
+
+Player 1's turn.
+Your current rack  [44, 36, 55, 38, 50, 9, 10, 56, 26, 32]
+Top of discard pile  22
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 22: 55
+The rack after the turn  [44, 36, 22, 38, 50, 9, 10, 56, 26, 32]
+
+Player 2's turn.
+Your current rack  [12, 43, 21, 33, 46, 59, 39, 19, 57, 15]
+Top of discard pile  55
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 55: 19
+The rack after the turn  [12, 43, 21, 33, 46, 59, 39, 55, 57, 15]
+
+Player 1's turn.
+Your current rack  [44, 36, 22, 38, 50, 9, 10, 56, 26, 32]
+Top of discard pile  19
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 19: 36
+The rack after the turn  [44, 19, 22, 38, 50, 9, 10, 56, 26, 32]
+
+Player 2's turn.
+Your current rack  [12, 43, 21, 33, 46, 59, 39, 55, 57, 15]
+Top of discard pile  36
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 36: 46
+The rack after the turn  [12, 43, 21, 33, 36, 59, 39, 55, 57, 15]
+
+Player 1's turn.
+Your current rack  [44, 19, 22, 38, 50, 9, 10, 56, 26, 32]
+Top of discard pile  46
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 46: 56
+The rack after the turn  [44, 19, 22, 38, 50, 9, 10, 46, 26, 32]
+
+Player 2's turn.
+Your current rack  [12, 43, 21, 33, 36, 59, 39, 55, 57, 15]
+Top of discard pile  56
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 56: 57
+The rack after the turn  [12, 43, 21, 33, 36, 59, 39, 55, 56, 15]
+
+Player 1's turn.
+Your current rack  [44, 19, 22, 38, 50, 9, 10, 46, 26, 32]
+Top of discard pile  57
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 57: 32
+The rack after the turn  [44, 19, 22, 38, 50, 9, 10, 46, 26, 57]
+
+Player 2's turn.
+Your current rack  [12, 43, 21, 33, 36, 59, 39, 55, 56, 15]
+Top of discard pile  32
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 32: 21
+The rack after the turn  [12, 43, 32, 33, 36, 59, 39, 55, 56, 15]
+
+Player 1's turn.
+Your current rack  [44, 19, 22, 38, 50, 9, 10, 46, 26, 57]
+Top of discard pile  21
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 20
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [44, 19, 22, 38, 50, 9, 10, 46, 26, 57]
+
+Player 2's turn.
+Your current rack  [12, 43, 32, 33, 36, 59, 39, 55, 56, 15]
+Top of discard pile  20
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 20: 43
+The rack after the turn  [12, 20, 32, 33, 36, 59, 39, 55, 56, 15]
+
+Player 1's turn.
+Your current rack  [44, 19, 22, 38, 50, 9, 10, 46, 26, 57]
+Top of discard pile  43
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 43: 10
+The rack after the turn  [44, 19, 22, 38, 50, 9, 43, 46, 26, 57]
+
+Player 2's turn.
+Your current rack  [12, 20, 32, 33, 36, 59, 39, 55, 56, 15]
+Top of discard pile  10
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 5
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [12, 20, 32, 33, 36, 59, 39, 55, 56, 15]
+
+Player 1's turn.
+Your current rack  [44, 19, 22, 38, 50, 9, 43, 46, 26, 57]
+Top of discard pile  5
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 5: 44
+The rack after the turn  [5, 19, 22, 38, 50, 9, 43, 46, 26, 57]
+
+Player 2's turn.
+Your current rack  [12, 20, 32, 33, 36, 59, 39, 55, 56, 15]
+Top of discard pile  44
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 44: 39
+The rack after the turn  [12, 20, 32, 33, 36, 59, 44, 55, 56, 15]
+
+Player 1's turn.
+Your current rack  [5, 19, 22, 38, 50, 9, 43, 46, 26, 57]
+Top of discard pile  39
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 39: 9
+The rack after the turn  [5, 19, 22, 38, 50, 39, 43, 46, 26, 57]
+
+Player 2's turn.
+Your current rack  [12, 20, 32, 33, 36, 59, 44, 55, 56, 15]
+Top of discard pile  9
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 3
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [12, 20, 32, 33, 36, 59, 44, 55, 56, 15]
+
+Player 1's turn.
+Your current rack  [5, 19, 22, 38, 50, 39, 43, 46, 26, 57]
+Top of discard pile  3
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 29
+Enter p to place card, anything else to discard it: p
+Enter the card number to replace with the 29: 38
+The rack after the turn  [5, 19, 22, 29, 50, 39, 43, 46, 26, 57]
+
+Player 2's turn.
+Your current rack  [12, 20, 32, 33, 36, 59, 44, 55, 56, 15]
+Top of discard pile  38
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 38: 59
+The rack after the turn  [12, 20, 32, 33, 36, 38, 44, 55, 56, 15]
+
+Player 1's turn.
+Your current rack  [5, 19, 22, 29, 50, 39, 43, 46, 26, 57]
+Top of discard pile  59
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 47
+Enter p to place card, anything else to discard it: p
+Enter the card number to replace with the 47: 26
+The rack after the turn  [5, 19, 22, 29, 50, 39, 43, 46, 47, 57]
+
+Player 2's turn.
+Your current rack  [12, 20, 32, 33, 36, 38, 44, 55, 56, 15]
+Top of discard pile  26
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 13
+Enter p to place card, anything else to discard it: p
+Enter the card number to replace with the 13: 12
+The rack after the turn  [13, 20, 32, 33, 36, 38, 44, 55, 56, 15]
+
+Player 1's turn.
+Your current rack  [5, 19, 22, 29, 50, 39, 43, 46, 47, 57]
+Top of discard pile  12
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 60
+Enter p to place card, anything else to discard it: p
+Enter the card number to replace with the 60: 50
+The rack after the turn  [5, 19, 22, 29, 60, 39, 43, 46, 47, 57]
+
+Player 2's turn.
+Your current rack  [13, 20, 32, 33, 36, 38, 44, 55, 56, 15]
+Top of discard pile  50
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 28
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [13, 20, 32, 33, 36, 38, 44, 55, 56, 15]
+
+Player 1's turn.
+Your current rack  [5, 19, 22, 29, 60, 39, 43, 46, 47, 57]
+Top of discard pile  28
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 49
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [5, 19, 22, 29, 60, 39, 43, 46, 47, 57]
+
+Player 2's turn.
+Your current rack  [13, 20, 32, 33, 36, 38, 44, 55, 56, 15]
+Top of discard pile  49
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 6
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [13, 20, 32, 33, 36, 38, 44, 55, 56, 15]
+
+Player 1's turn.
+Your current rack  [5, 19, 22, 29, 60, 39, 43, 46, 47, 57]
+Top of discard pile  6
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 18
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [5, 19, 22, 29, 60, 39, 43, 46, 47, 57]
+
+Player 2's turn.
+Your current rack  [13, 20, 32, 33, 36, 38, 44, 55, 56, 15]
+Top of discard pile  18
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 27
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [13, 20, 32, 33, 36, 38, 44, 55, 56, 15]
+
+Player 1's turn.
+Your current rack  [5, 19, 22, 29, 60, 39, 43, 46, 47, 57]
+Top of discard pile  27
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 27: 29
+The rack after the turn  [5, 19, 22, 27, 60, 39, 43, 46, 47, 57]
+
+Player 2's turn.
+Your current rack  [13, 20, 32, 33, 36, 38, 44, 55, 56, 15]
+Top of discard pile  29
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 14
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [13, 20, 32, 33, 36, 38, 44, 55, 56, 15]
+
+Player 1's turn.
+Your current rack  [5, 19, 22, 27, 60, 39, 43, 46, 47, 57]
+Top of discard pile  14
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 1
+Enter p to place card, anything else to discard it: p
+Enter the card number to replace with the 1: 5
+The rack after the turn  [1, 19, 22, 27, 60, 39, 43, 46, 47, 57]
+
+Player 2's turn.
+Your current rack  [13, 20, 32, 33, 36, 38, 44, 55, 56, 15]
+Top of discard pile  5
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 41
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [13, 20, 32, 33, 36, 38, 44, 55, 56, 15]
+
+Player 1's turn.
+Your current rack  [1, 19, 22, 27, 60, 39, 43, 46, 47, 57]
+Top of discard pile  41
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 37
+Enter p to place card, anything else to discard it: p
+Enter the card number to replace with the 37: 60
+The rack after the turn  [1, 19, 22, 27, 37, 39, 43, 46, 47, 57]
+
+Player 1 wins!
+
+*****
+
+
+Example 3 - Inputs: n,6,10,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,d,p,41,p,5,p,20,p,39,p,50,p,34,p,8,p,25,p,33,p,59,d,d,p,33,d,p,30
+
+*****
+----- Welcome to Rack - O! -----
+Enter y to display instructions: n
+
+Enter number for initial seed: 6
+Enter the size of the rack to use. Must be between 5 and 10: 10
+
+Player 1's turn.
+Your current rack  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+Top of discard pile  46
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 55
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+
+Player 2's turn.
+Your current rack  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+Top of discard pile  55
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 4
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+
+Player 1's turn.
+Your current rack  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+Top of discard pile  4
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 23
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+
+Player 2's turn.
+Your current rack  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+Top of discard pile  23
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 15
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+
+Player 1's turn.
+Your current rack  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+Top of discard pile  15
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 9
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+
+Player 2's turn.
+Your current rack  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+Top of discard pile  9
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 29
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+
+Player 1's turn.
+Your current rack  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+Top of discard pile  29
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 14
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+
+Player 2's turn.
+Your current rack  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+Top of discard pile  14
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 26
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+
+Player 1's turn.
+Your current rack  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+Top of discard pile  26
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 12
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+
+Player 2's turn.
+Your current rack  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+Top of discard pile  12
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 58
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+
+Player 1's turn.
+Your current rack  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+Top of discard pile  58
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 22
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+
+Player 2's turn.
+Your current rack  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+Top of discard pile  22
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 28
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+
+Player 1's turn.
+Your current rack  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+Top of discard pile  28
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 57
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+
+Player 2's turn.
+Your current rack  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+Top of discard pile  57
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 54
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+
+Player 1's turn.
+Your current rack  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+Top of discard pile  54
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 36
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+
+Player 2's turn.
+Your current rack  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+Top of discard pile  36
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 42
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+
+Player 1's turn.
+Your current rack  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+Top of discard pile  42
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 7
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+
+Player 2's turn.
+Your current rack  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+Top of discard pile  7
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 40
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+
+Player 1's turn.
+Your current rack  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+Top of discard pile  40
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 35
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+
+Player 2's turn.
+Your current rack  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+Top of discard pile  35
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 27
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+
+Player 1's turn.
+Your current rack  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+Top of discard pile  27
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 13
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+
+Player 2's turn.
+Your current rack  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+Top of discard pile  13
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 56
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+
+Player 1's turn.
+Your current rack  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+Top of discard pile  56
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 18
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+
+Player 2's turn.
+Your current rack  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+Top of discard pile  18
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 2
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+
+Player 1's turn.
+Your current rack  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+Top of discard pile  2
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 21
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+
+Player 2's turn.
+Your current rack  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+Top of discard pile  21
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 24
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+
+Player 1's turn.
+Your current rack  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+Top of discard pile  24
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 31
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+
+Player 2's turn.
+Your current rack  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+Top of discard pile  31
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 38
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+
+Player 1's turn.
+Your current rack  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+Top of discard pile  38
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 43
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+
+Player 2's turn.
+Your current rack  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+Top of discard pile  43
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 10
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+
+Player 1's turn.
+Your current rack  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+Top of discard pile  10
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 1
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+
+Player 2's turn.
+Your current rack  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+Top of discard pile  1
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 3
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+
+Player 1's turn.
+Your current rack  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+Top of discard pile  3
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 17
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+
+Player 2's turn.
+Your current rack  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+Top of discard pile  17
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 49
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+
+Player 1's turn.
+Your current rack  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+Top of discard pile  49
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 32
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+
+Player 2's turn.
+Your current rack  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+Top of discard pile  32
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 6
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+
+Player 1's turn.
+Your current rack  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+Top of discard pile  6
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 53
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+
+Player 2's turn.
+Your current rack  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+Top of discard pile  53
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 37
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+
+Player 1's turn.
+Your current rack  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+Top of discard pile  37
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 51
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+
+Deck is empty. Shuffling discard pile.
+Player 2's turn.
+Your current rack  [20, 41, 19, 33, 8, 30, 50, 45, 47, 60]
+Top of discard pile  13
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 13: 41
+The rack after the turn  [20, 13, 19, 33, 8, 30, 50, 45, 47, 60]
+
+Player 1's turn.
+Your current rack  [25, 11, 39, 48, 59, 5, 44, 34, 52, 16]
+Top of discard pile  41
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 41: 5
+The rack after the turn  [25, 11, 39, 48, 59, 41, 44, 34, 52, 16]
+
+Player 2's turn.
+Your current rack  [20, 13, 19, 33, 8, 30, 50, 45, 47, 60]
+Top of discard pile  5
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 5: 20
+The rack after the turn  [5, 13, 19, 33, 8, 30, 50, 45, 47, 60]
+
+Player 1's turn.
+Your current rack  [25, 11, 39, 48, 59, 41, 44, 34, 52, 16]
+Top of discard pile  20
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 20: 39
+The rack after the turn  [25, 11, 20, 48, 59, 41, 44, 34, 52, 16]
+
+Player 2's turn.
+Your current rack  [5, 13, 19, 33, 8, 30, 50, 45, 47, 60]
+Top of discard pile  39
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 39: 50
+The rack after the turn  [5, 13, 19, 33, 8, 30, 39, 45, 47, 60]
+
+Player 1's turn.
+Your current rack  [25, 11, 20, 48, 59, 41, 44, 34, 52, 16]
+Top of discard pile  50
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 50: 34
+The rack after the turn  [25, 11, 20, 48, 59, 41, 44, 50, 52, 16]
+
+Player 2's turn.
+Your current rack  [5, 13, 19, 33, 8, 30, 39, 45, 47, 60]
+Top of discard pile  34
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 34: 8
+The rack after the turn  [5, 13, 19, 33, 34, 30, 39, 45, 47, 60]
+
+Player 1's turn.
+Your current rack  [25, 11, 20, 48, 59, 41, 44, 50, 52, 16]
+Top of discard pile  8
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 8: 25
+The rack after the turn  [8, 11, 20, 48, 59, 41, 44, 50, 52, 16]
+
+Player 2's turn.
+Your current rack  [5, 13, 19, 33, 34, 30, 39, 45, 47, 60]
+Top of discard pile  25
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 25: 33
+The rack after the turn  [5, 13, 19, 25, 34, 30, 39, 45, 47, 60]
+
+Player 1's turn.
+Your current rack  [8, 11, 20, 48, 59, 41, 44, 50, 52, 16]
+Top of discard pile  33
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 33: 59
+The rack after the turn  [8, 11, 20, 48, 33, 41, 44, 50, 52, 16]
+
+Player 2's turn.
+Your current rack  [5, 13, 19, 25, 34, 30, 39, 45, 47, 60]
+Top of discard pile  59
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 40
+Enter p to place card, anything else to discard it: d
+The rack after the turn  [5, 13, 19, 25, 34, 30, 39, 45, 47, 60]
+
+Player 1's turn.
+Your current rack  [8, 11, 20, 48, 33, 41, 44, 50, 52, 16]
+Top of discard pile  40
+Enter d to draw anything else to take top of discard pile: p
+
+Enter the card number to replace with the 40: 33
+The rack after the turn  [8, 11, 20, 48, 40, 41, 44, 50, 52, 16]
+
+Player 2's turn.
+Your current rack  [5, 13, 19, 25, 34, 30, 39, 45, 47, 60]
+Top of discard pile  33
+Enter d to draw anything else to take top of discard pile: d
+
+drew the 37
+Enter p to place card, anything else to discard it: p
+Enter the card number to replace with the 37: 30
+The rack after the turn  [5, 13, 19, 25, 34, 37, 39, 45, 47, 60]
+
+Player 2 wins!
+
+*****
