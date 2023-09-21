@@ -5,7 +5,7 @@ from unittest import TestCase
 from racko import main
 from tud_test_base import *
 
-def test_team_wins():
+def test_racko():
     try:
         exist = os.path.exists("racko.py")
         assert exist == True
